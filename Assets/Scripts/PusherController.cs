@@ -4,8 +4,6 @@ using System.Collections;
 public class PusherController : MonoBehaviour 
 {
 	public bool PusherMovedEnabled = false;
-	public bool inMovableArea = true;
-	public bool inTouchWithRail = false;
 
 	void FixedUpdate () 
 	{
@@ -46,6 +44,7 @@ public class PusherController : MonoBehaviour
 	{
 		if (PusherMovedEnabled)
 		{
+			Debug.Log (rigidbody.velocity);
 			if (Mathf.Abs(point.x) < 12)
 			{
 				if ((point.z <0) && (point.z > -30))
