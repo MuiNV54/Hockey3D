@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PuckController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PusherController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PuckController.cs" Line="8" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\FramgiaDungvt\Dropbox\Work\Framgia\Training\Projects\HockeyClone\Assets\Scripts\PuckController.cs" line="10" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
