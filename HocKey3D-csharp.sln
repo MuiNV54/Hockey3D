@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{1AF8496A-8799-AE77-80E1-AD13A243F08D}") = "HocKey3D", "Assembly-CSharp-vs.csproj", "{2D32F1C0-92F2-A238-00DE-84D309C1D438}"
+Project("{239B66CB-B1CE-91E4-0681-E9E4071DC69C}") = "Hockey3D", "Assembly-CSharp-vs.csproj", "{A9F1369F-A55A-4FB4-59A7-98F4686066C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D32F1C0-92F2-A238-00DE-84D309C1D438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D32F1C0-92F2-A238-00DE-84D309C1D438}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D32F1C0-92F2-A238-00DE-84D309C1D438}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D32F1C0-92F2-A238-00DE-84D309C1D438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F1369F-A55A-4FB4-59A7-98F4686066C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F1369F-A55A-4FB4-59A7-98F4686066C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F1369F-A55A-4FB4-59A7-98F4686066C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F1369F-A55A-4FB4-59A7-98F4686066C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
