@@ -17,14 +17,6 @@ public class PusherController : MonoBehaviour
 		ControlPusher ();
 	}
 
-//	void OnTriggerEnter(Collider other)
-//	{
-//		if (other.tag == "Rail")
-//		{
-//			if ()
-//		}
-//	}
-
 	void ControlPusher()
 	{
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -43,7 +35,6 @@ public class PusherController : MonoBehaviour
 			}
 		}
 
-//		SetMovableArea (hit.point);
 		UpdatePosition(hit.point);
 	}
 
@@ -54,15 +45,7 @@ public class PusherController : MonoBehaviour
 			Vector3 ForceControll = point - transform.position;
 			ForceControll.y = 0;
 
-			rigidbody.AddForce(ForceControll*1000);
-
-			rigidbody.useGravity = true;
-			rigidbody.isKinematic = false;
-		}
-		else
-		{
-			rigidbody.useGravity = false;
-			rigidbody.isKinematic = true;
+			rigidbody.AddForce(ForceControll*3000);
 		}
 	}
 
