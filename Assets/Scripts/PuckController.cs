@@ -26,10 +26,10 @@ public class PuckController : MonoBehaviour {
 		vectorAIDiff = transform.position - AIMallet.transform.position;
 
 		if (vectorPlayerDiff.magnitude < playerMalletDistance)
-			rigidbody.AddForce((vectorPlayerDiff/vectorPlayerDiff.magnitude)*1000);
+			rigidbody.AddForce((vectorPlayerDiff/vectorPlayerDiff.magnitude)*500);
 
 		if (vectorAIDiff.magnitude < AIMalletDistance)
-			rigidbody.AddForce((vectorAIDiff/vectorAIDiff.magnitude)*1000);
+			rigidbody.AddForce((vectorAIDiff/vectorAIDiff.magnitude)*500);
 	}
 
 	void Update()
