@@ -21,7 +21,7 @@ public class DifficultyScript : MonoBehaviour {
 			Application.LoadLevel("Scene1");
 			break;
 		case "Hard_text" :
-			Application.LoadLevel("Basic");
+			Application.LoadLevel("Scene");
 			break;
 		case "Back_text" :
 			Application.LoadLevel("Menu");
