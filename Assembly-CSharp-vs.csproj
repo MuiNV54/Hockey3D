@@ -46,7 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AIMovement.cs" />
+     <Compile Include="Assets\Scripts\AIBehavior.cs" />
+     <Compile Include="Assets\Scripts\AISetState.cs" />
+     <Compile Include="Assets\Scripts\DisplayScore.cs" />
+     <Compile Include="Assets\Scripts\MalletBorder.cs" />
      <Compile Include="Assets\Scripts\PlayerMalletController.cs" />
      <Compile Include="Assets\Scripts\PuckController.cs" />
      <Compile Include="Assets\Scripts\PusherController.cs" />

@@ -45,7 +45,7 @@ public class PusherController : MonoBehaviour
 			Vector3 ForceControll = point - transform.position;
 			ForceControll.y = 0;
 
-			rigidbody.AddForce(ForceControll*3000);
+			rigidbody.AddForce(ForceControll*5000);
 		}
 	}
 
