@@ -726,6 +726,7 @@ GameObject:
   - 64: {fileID: 756107229}
   - 54: {fileID: 756107233}
   - 114: {fileID: 756107234}
+  - 114: {fileID: 756107235}
   m_Layer: 0
   m_Name: Mallet_player
   m_TagString: Mallet
@@ -817,6 +818,22 @@ MonoBehaviour:
   RightBorder: 17
   TopBorder: 0
   BotBorer: -28.3999996
+  velocityCoeff: 50
+--- !u!114 &756107235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756107228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f61ccdbc05ce4fe691e7e01360f269a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftBorder: -17
+  RightBorder: 17
+  BotBorder: -28.3999996
+  TopBorder: 0
 --- !u!1001 &775837669
 Prefab:
   m_ObjectHideFlags: 0

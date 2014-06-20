@@ -10,8 +10,8 @@ public class Puck : MonoBehaviour {
 	public float deadTimer = 1.0f;
 	public float resetdeadTimer = 1.0f;
 
-	public static int playerScore = 0;
-	public static int AIScore = 0;
+	public static int playerScore;
+	public static int AIScore;
 
 	private AISetState aiMovement;
 
@@ -29,6 +29,9 @@ public class Puck : MonoBehaviour {
 		AIMalletDistance = (gameObject.transform.localScale.x + AIMallet.gameObject.transform.localScale.x) / 2;
 
 		aiMovement = AIMallet.GetComponent<AISetState> ();
+
+		playerScore = 0;
+		AIScore = 0;
 	}
 	
 	void FixedUpdate () 
@@ -37,11 +40,11 @@ public class Puck : MonoBehaviour {
 		vectorAIDiff = transform.position - AIMallet.transform.position;
 
 		if (vectorPlayerDiff.magnitude < playerMalletDistance)
-			rigidbody.AddForce((vectorPlayerDiff/vectorPlayerDiff.magnitude)*3000);
+			rigidbody.AddForce((vectorPlayerDiff/vectorPlayerDiff.magnitude)*300);
 
 		if (vectorAIDiff.magnitude < AIMalletDistance)
 		{
-			rigidbody.AddForce((vectorAIDiff/vectorAIDiff.magnitude)*3000);
+			rigidbody.AddForce((vectorAIDiff/vectorAIDiff.magnitude)*600);
 			if (!aiMovement.backwardActive)
 			{
 				aiMovement.backwardActive = true;

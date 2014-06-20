@@ -10,10 +10,10 @@ public class PusherController : MonoBehaviour
 	public float RightBorder = 10;
 	public float TopBorder = 0;
 	public float BotBorer = -28.4f;
+	public float velocityCoeff;
 
 	void FixedUpdate () 
 	{
-		SetBorder ();
 		ControlPusher ();
 	}
 
@@ -45,22 +45,9 @@ public class PusherController : MonoBehaviour
 			Vector3 ForceControll = point - transform.position;
 			ForceControll.y = 0;
 
-			rigidbody.AddForce(ForceControll*5000);
-		}
-	}
+//			rigidbody.AddForce(ForceControll*5000);
 
-	void SetBorder()
-	{
-		if (transform.position.z > TopBorder)
-			transform.position = new Vector3(transform.position.x, transform.position.y, TopBorder);
-		
-		if (transform.position.z < BotBorer)
-			transform.position = new Vector3(transform.position.x, transform.position.y, BotBorer);
-		
-		if (transform.position.x < LeftBorder)
-			transform.position = new Vector3(LeftBorder ,transform.position.y, transform.position.z);
-		
-		if (transform.position.x > RightBorder)
-			transform.position = new Vector3(RightBorder ,transform.position.y, transform.position.z);
+			rigidbody.velocity = ForceControll*velocityCoeff;
+		}
 	}
 }
