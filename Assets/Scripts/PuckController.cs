@@ -4,25 +4,63 @@ using System.Collections;
 public class PuckController : MonoBehaviour {
 
 	public GameObject PlayerMallet;
-	// Use this for initialization
-	void Start () {
+	public GameObject AIMallet;
 
+	private float playerMalletDistance;
+	private float AIMalletDistance;
+	private Vector3 vectorPlayerDiff;
+	private Vector3 vectorAIDiff;
+
+	private Vector3 startPosition;
+
+	void Start () 
+	{
+		startPosition = transform.position;
+		playerMalletDistance = (gameObject.transform.localScale.x + PlayerMallet.gameObject.transform.localScale.x) / 2;
+		AIMalletDistance = (gameObject.transform.localScale.x + AIMallet.gameObject.transform.localScale.x) / 2;
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate () {
-		Vector3 vector_diff = gameObject.transform.position - PlayerMallet.transform.position;
-		if (vector_diff.magnitude <
-		    (gameObject.transform.localScale.x + PlayerMallet.gameObject.transform.localScale.x)/2)
-			rigidbody.AddForce((vector_diff/vector_diff.magnitude)*300);
+	void FixedUpdate () 
+	{
+		vectorPlayerDiff = gameObject.transform.position - PlayerMallet.transform.position;
+		vectorAIDiff = transform.position - AIMallet.transform.position;
+
+		if (vectorPlayerDiff.magnitude < playerMalletDistance)
+			rigidbody.AddForce((vectorPlayerDiff/vectorPlayerDiff.magnitude)*500);
+
+		if (vectorAIDiff.magnitude < AIMalletDistance)
+			rigidbody.AddForce((vectorAIDiff/vectorAIDiff.magnitude)*500);
 	}
-	
-//	void OnCollisionEnter(Collision col) {
-//		if( col.gameObject.name == "Mallet_player")
+
+	void Update()
+	{
+//		Debug.Log (rigidbody.velocity);
+	}
+
+//	void OnCollisionEnter(Collision other)
+//	{
+//		if (other.gameObject.tag == "Mallet")
 //		{
-//			Vector3 vector_diff = gameObject.transform.position - PlayerMallet.transform.position;
-//			rigidbody.AddForce((vector_diff/vector_diff.magnitude)*500);
+//			Vector3 vectorDiff = transform.position - other.transform.position;
+//			rigidbody.AddForce(vectorDiff/vectorDiff.magnitude * 2000);
 //		}
 //	}
 
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Goal")
+		{
+			rigidbody.velocity = Vector3.zero;
+			Vector3 startPointDiff = PlayerMallet.transform.position - startPosition;
+
+			if (startPointDiff.magnitude < playerMalletDistance)
+			{	
+				transform.position = PlayerMallet.transform.position + new Vector3(0, 0, playerMalletDistance);
+			}
+			else
+			{
+				transform.position = startPosition;
+			}
+		}
+	}
 }
