@@ -818,7 +818,7 @@ MonoBehaviour:
   RightBorder: 17
   TopBorder: 0
   BotBorer: -28.3999996
-  velocityCoeff: 50
+  velocityCoeff: 70
 --- !u!114 &756107235
 MonoBehaviour:
   m_ObjectHideFlags: 0

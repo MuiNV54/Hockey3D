@@ -20,18 +20,23 @@ public class MalletBorder : MonoBehaviour
 
 	void SetBorder()
 	{
-		if (transform.position.z > TopBorder)
-			transform.position = new Vector3(transform.position.x, transform.position.y, TopBorder);
-		
-		if (transform.position.z < BotBorder)
+		Vector3 currentPos = transform.position;
+		if (currentPos.z > TopBorder)
 		{
-			transform.position = new Vector3(transform.position.x, transform.position.y, BotBorder);
+			currentPos.z = TopBorder;
 		}
 		
-		if (transform.position.x < LeftBorder)
-			transform.position = new Vector3(LeftBorder ,transform.position.y, transform.position.z);
+		if (currentPos.z < BotBorder)
+		{
+			currentPos.z = BotBorder;
+		}
 		
-		if (transform.position.x > RightBorder)
-			transform.position = new Vector3(RightBorder ,transform.position.y, transform.position.z);
+		if (currentPos.x < LeftBorder)
+			currentPos.x = LeftBorder;
+
+		if (currentPos.x > RightBorder)
+			currentPos.x = RightBorder;
+
+		transform.position = currentPos;
 	}
 }
